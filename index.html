@@ -3,44 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/animate.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6b202e4e84.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/animate.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Jacob Stordahl</title>
 </head>
 <body>
     <div class="container">
-        <nav class="nav justify-content-end">
-            <button type="button" class=" btn btn-outline-secondary" id="projectsBtn">
-                projects
-            </button>
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-                contact
-            </button>
+        <nav class="nav justify-content-between">
+            <div class="navCont">
+                <div id="toggle-container">
+                    <input id="check" type="checkbox" class="checkbox" />
+                    <label id="check-label" class="label-light" for="check">
+                        <div id="ball" class="ball ball-light"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="navCont">
+                <button type="button" class=" btn btn-outline-secondary" id="projectsBtn">
+                    projects
+                </button>
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                    contact
+                </button>
+            </div>
+            
         </nav>
         <div class="row d-flex align-items-center" id="row1">
-            <div class="col-12 col-lg-4">
-                <img src="img/meemoji.jpg" alt="memoji" id="meemoji">
+            <div class="col-12 col-md-4">
+                <img src="img/memoji.png" alt="memoji" id="memoji">
             </div>
-            <div class="col-12 col-lg-8">
-                <h3 class="title" id="hello">hello!</h3>
-                <p>my name is <strong>jacob stordahl</strong> and I’m a <strong>jr. developer</strong> living and working in the beautiful <strong>PNW</strong>. I’ve been writing html & css
+            <div class="col-12 col-md-8">
+                <h3 class="title text" id="hello">hello!</h3>
+                <p class="text">my name is <strong>jacob stordahl</strong> and I’m a <strong>jr. developer</strong> living and working in the beautiful <strong>PNW</strong>. I’ve been writing html & css
                 for years; however I recently decided to leave my career as a fabricator to pursue <strong>development full-time</strong>. i’m currently
                 working towards becoming a <strong>full-stack javascript developer.</strong></p>
-                <p>make sure to <strong>follow me on twitter</strong> to see what I’m up to!</p>
+                <p class="text">make sure to <strong>follow me on twitter</strong> to see what I’m up to!</p>
                 <div class="d-flex" id="socialCont">
-                    <a href="https://github.com/stordahl" target="_blank"><i class="fab fa-github-square"></i></a>
-                    <a href="https://twitter.com/stordahl_" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                    <a href="https://www.instagram.com/stordahl_/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://github.com/stordahl" target="_blank"><i class="fab fa-github-square text"></i></a>
+                    <a href="https://twitter.com/stordahl_" target="_blank"><i class="fab fa-twitter-square text"></i></a>
+                    <a href="https://www.instagram.com/stordahl_/" target="_blank"><i class="fab fa-instagram-square text"></i></a>
                 </div>
             </div>
         </div>
         <div class="row" id="row2">
-            <div class="col-6 d-flex flex-column align-items-center stack">
-                <h2 class="stackTitle">&lt current stack &gt</h2>
-                <ul>
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center stack">
+                <h2 class="stackTitle text">&lt current stack &gt</h2>
+                <ul class="text">
                     <li>HTML5/ CSS3</li>
                     <li>Vanilla JS</li>
                     <li>Sass/ SCSS</li>
@@ -48,9 +59,9 @@
                     <li>jQuery</li>
                 </ul>
             </div>
-            <div class="col-6 d-flex flex-column align-items-center stack">
-                <h2 class="stackTitle">&lt/ learning &gt</h2>
-                <ul>
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center stack">
+                <h2 class="stackTitle text">&lt/ learning &gt</h2>
+                <ul class="text">
                     <li>Node.js</li>
                     <li>express.js</li>
                     <li>React</li>
@@ -59,30 +70,32 @@
                 </ul>
             </div>
         </div>
+
+        <!-- cards -->
         <div class="row d-flex justify-content-around" id="row3">
             <div class="card" style="width: 18rem;">
                 <img src="img/aqw-preview.jpg" class="card-img-top" alt="preview img">
                 <div class="card-body">
-                    <h5 class="card-title">a quiet workspace</h5>
-                    <p class="card-text">this project is a small "new tab" app meant to replace to function of post it 
+                    <h5 class="card-title text">a quiet workspace</h5>
+                    <p class="card-text text">this project is a small "new tab" app meant to replace to function of post it 
                         notes and other small lists while working.</p>
-                    <a href="https://a-quiet-workspace.netlify.com/" class="btn btn-primary" target="_blank">open</a>
+                    <a href="https://a-quiet-workspace.netlify.com/" class="btn btn-outline-primary" target="_blank">open</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="img/bcs-preview.jpg" class="card-img-top" alt="preview img">
                 <div class="card-body">
-                    <h5 class="card-title">Black Cat Studio</h5>
-                    <p class="card-text">a quick landing page for the design studio i've started with my partner <a href="https://www.instagram.com/rotten.milke">Taelor Hill</a></p>
-                    <a href="https://www.blkcatstudio.com/" class="btn btn-primary" target="_blank">open</a> 
+                    <h5 class="card-title text">Black Cat Studio</h5>
+                    <p class="card-text text">a quick landing page for the design studio i've started with my partner <a href="https://www.instagram.com/rotten.milke">Taelor Hill</a></p>
+                    <a href="https://www.blkcatstudio.com/" class="btn btn-outline-primary" target="_blank">open</a> 
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="img/shadow-preview.jpg" class="card-img-top" alt="preview img">
                 <div class="card-body">
-                    <h5 class="card-title">Shadow</h5>
-                    <p class="card-text">another "new tab" tool that displays current time and weather for users location</p>
-                    <a href="https://shadowui.netlify.com/" class="btn btn-primary" target="_blank">open</a>
+                    <h5 class="card-title text">Shadow</h5>
+                    <p class="card-text text">another "new tab" tool that displays current time and weather for users location</p>
+                    <a href="https://shadowui.netlify.com/" class="btn btn-outline-primary" target="_blank">open</a>
                 </div>
             </div>
         </div>
@@ -90,33 +103,33 @@
             <div class="card" style="width: 18rem;">
                 <img src="img/todo-preview.jpg" class="card-img-top" alt="preview img">
                 <div class="card-body">
-                    <h5 class="card-title">jQuery todo</h5>
-                    <p class="card-text">a small todo app built with jQuery and styled with a dark mode toggle</p>
-                    <a href="https://stordahl-todo.netlify.com/" class="btn btn-primary" target="_blank">open</a>
+                    <h5 class="card-title text">jQuery todo</h5>
+                    <p class="card-text text">a small todo app built with jQuery and styled with a dark mode toggle</p>
+                    <a href="https://stordahl-todo.netlify.com/" class="btn btn-outline-primary" target="_blank">open</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="img/qdn-preview.jpg" class="card-img-top" alt="preview img">
                 <div class="card-body">
-                    <h5 class="card-title">Queer Developer Network</h5>
-                    <p class="card-text">a landing page for the Queer Developer Network</p>
-                    <a href="https://qdn.netlify.com/" class="btn btn-primary" target="_blank">open</a>
+                    <h5 class="card-title text">Queer Developer Network</h5>
+                    <p class="card-text text">a landing page for the Queer Developer Network</p>
+                    <a href="https://qdn.netlify.com/" class="btn btn-outline-primary" target="_blank">open</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="img/color-preview.jpg" class="card-img-top" alt="preview img">
                 <div class="card-body">
-                    <h5 class="card-title">rgb guessing game</h5>
-                    <p class="card-text">from Colt Steele's Web Developer Bootcamp, converted to ES2015 syntax</p>
-                    <a href="https://es6-color-game.netlify.com" class="btn btn-primary" target="_blank">open</a>
+                    <h5 class="card-title text">rgb guessing game</h5>
+                    <p class="card-text text">from Colt Steele's Web Developer Bootcamp, converted to ES2015 syntax</p>
+                    <a href="https://es6-color-game.netlify.com" class="btn btn-outline-primary" target="_blank">open</a>
                 </div>
             </div>
         </div>
         <footer>
             <div class="row" id="rowFoot">
                 <div class="col"></div>
-                <div class="col-4">
-                    copyright 2020 Jacob Stordahl
+                <div class="col-10 col-md-4">
+                    <p class="text">copyright 2020 Jacob Stordahl</p>
                 </div>
                 <div class="col"></div>
             </div>
@@ -128,7 +141,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">email me!</h5>
+                        <h5 class="modal-title text" id="exampleModalLabel">email me!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -137,22 +150,22 @@
                         <form class="needs-validation" method="POST" novalidate netlify>
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
-                                    <label for="validationCustom01">first name</label>
+                                    <label for="validationCustom01" class="text">first name</label>
                                     <input type="text" class="form-control" id="validationCustom01" name="first-name" placeholder="sailor" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
-                                    <label for="validationCustom02">last name</label>
+                                    <label for="validationCustom02" class="text">last name</label>
                                     <input type="text" class="form-control" id="validationCustom02" name="last-name" placeholder="moon" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
-                                    <label for="validationCustom02">email</label>
-                                    <input type="text" class="form-control" id="validationCustom02" name="email" placeholder="example@gmail.com" required>
+                                    <label for="validationCustom02" class="text">email</label>
+                                    <input type="text" class="form-control" id="validationCustom03" name="email" placeholder="example@gmail.com" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -161,7 +174,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="validationCustom04">reason for emailing</label>
+                                    <label for="validationCustom04" class="text">reason for emailing</label>
                                     <select class="custom-select" id="validationCustom04" name="reason" required>
                                         <option selected disabled value="">Choose...</option>
                                         <option>coffee meeting</option>
@@ -175,7 +188,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Message:</label>
+                                <label for="exampleFormControlTextarea1" class="text">Message:</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message" required></textarea>
                                 <div class="invalid-feedback">
                                     Please enter a message!
@@ -189,7 +202,7 @@
             </div>
         </div>
     </div>
-    <i class="fas fa-chevron-down animated bounceInUp slow" id="chev"></i>
+    <i class="fas fa-chevron-down animated bounceInUp slow text" id="chev"></i>
 
 
 

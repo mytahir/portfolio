@@ -66,3 +66,17 @@ window.addEventListener("scroll", () => {
 chev.addEventListener('click', () => {
     row2.scrollIntoView({ block: 'start', behavior: 'smooth' });
 });
+
+// jQuery Theme toggler
+$('#check-label').on('click', () => {
+    $('.text').toggleClass('text-dark');
+    $('.container').toggleClass('container-dark');
+    $('body').toggleClass('container-dark');
+    $('.card').toggleClass('card-dark');
+    $('.btn').toggleClass('btn-outline-light');
+    $('.modal-content').toggleClass('modal-dark');
+    $('.form-control').toggleClass('form-dark');
+    $('#validationCustom04').toggleClass('form-dark');
+    $('#check-label').toggleClass('label-dark');
+    $('#ball').toggleClass('ball-dark');
+});

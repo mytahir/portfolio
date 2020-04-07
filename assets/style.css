@@ -15,11 +15,67 @@ nav button {
   margin: .5rem;
 }
 
+.navCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projectsBtn {
+  display: none;
+}
+
+#check {
+  opacity: 0;
+  position: absolute;
+}
+
+#check-label {
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 3px;
+  height: 20px;
+  width: 40px;
+}
+
+#check-label .ball {
+  background-color: #007bff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  height: 13px;
+  width: 13px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.checkbox:checked + #check-label .ball {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
 .row {
   margin-bottom: 2rem;
 }
 
-#meemoji {
+#memoji {
   width: 100%;
 }
 
@@ -31,7 +87,7 @@ nav button {
   line-height: 2;
 }
 
-#row2 {
+.stack {
   padding-bottom: 3rem;
   padding-top: 3rem;
 }
@@ -83,9 +139,54 @@ nav button {
   right: 30px;
 }
 
+/* light theme classes */
+.label-light {
+  border: 1px solid #007bff;
+}
+
+/* dark theme classes */
+.label-dark {
+  background-color: #CACFD6;
+  border: none;
+}
+
+#check-label .ball-dark {
+  background-color: #424B54;
+}
+
+.text-dark {
+  color: #fff !important;
+}
+
+.container-dark {
+  background-color: #424B54;
+}
+
+.card-dark {
+  background-color: #424B54;
+  -webkit-box-shadow: 0px 5px 35px;
+          box-shadow: 0px 5px 35px;
+}
+
+.modal-dark {
+  background-color: #424B54;
+}
+
+.form-dark {
+  background-color: #30353a;
+  color: #fff;
+}
+
 @media (min-width: 768px) {
   #chev {
     display: block;
+  }
+  #projectsBtn {
+    display: inline;
+  }
+  #memoji {
+    width: 135%;
+    margin-left: -2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
